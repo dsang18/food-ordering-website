@@ -1,0 +1,65 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Profile</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'profile.css' %}">
+</head>
+<body>
+
+<div class="container">
+		<div class="navbar">
+			<img src="{% static 'food.jpg' %}" class="logo">
+			<nav>
+				<ul>
+					
+					<li><a href="/order-food/home/{{pk}}/">Home</a></li>
+					<li><a href="/order-food/home/{{pk}}/veg-menu/">Veg</a></li>
+					<li><a href="/order-food/home/{{pk}}/nonveg-menu/">Non veg</a></li>
+					<li><a href="/order-food/home/{{pk}}/cart/">Cart</a></li>
+					<li><a href="/order-food/">Log out</a></li>
+					
+				</ul>
+			</nav>
+			</div>
+			
+		
+
+			
+
+<br>
+<br>
+<br>
+
+<label class="info"> <strong>User ID </strong>  	  : {{profile.0}}</label> <br><br> 
+<br>
+
+<label class="info"><strong>Full Name</strong>     : {{profile.1}}</label><br><br>
+<br>
+
+<label class="info"><strong>Email</strong>         : {{profile.2}}</label><br><br>
+<br>
+
+<label class="info"><strong>Phone Number</strong>  : {{profile.3}}</label><br><br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+			
+
+		<a href="/order-food/home/{{pk}}/"><input type="submit" value="Back"></a>
+			
+    
+        </div>
+		
+
+</body>
+</html>

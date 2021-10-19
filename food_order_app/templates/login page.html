@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Login</title>
+	<link rel="stylesheet"  href="{% static 'login.css'%}">
+</head>
+<body>
+	
+<div class="center">
+	<h1> Login </h1>
+	<form method="post">
+		{% csrf_token %}
+		<div class="textfield">
+			<input  name="phoneno", type="text" required>
+			<span></span>
+			<label>Phone number</label>
+			
+
+		</div>
+		<div class="textfield">
+			<input type="Password" , name="passwd", required>
+			<span></span>
+			<label>Password</label>
+			
+	
+		</div>
+
+		<h4>{{message}}</h4>
+		<div class="pass">Forgot Password</div>
+		<input type="submit" value="Login">
+		<a href="/order-food/"><input type="button" value="Back"></a>
+        <div class="signup_link">
+        	Not a member?<a href="/order-food/register/">Sign up</a>
+        </div>
+
+
+	</form>
+
+
+
+</body>
+</html>

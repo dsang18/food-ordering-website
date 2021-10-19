@@ -1,0 +1,180 @@
+*{
+margin: 0;
+padding: 0;
+}
+.container
+{
+   height: 100vh;
+   width:100%;
+   background-image:url("images/c3.jpg");
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   padding-left: 25%;
+   padding-right:5%; 
+   box-sizing: border-box;
+   position: relative;
+}
+
+.navbar
+{
+  width: 100%;
+  height: 15vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+
+}
+.logo
+{
+width: 100px;
+cursor: pointer;
+border: ridge;
+border-color:black;
+}
+.drop
+{
+
+justify-content: flex-start;
+margin-top: 30px;
+padding-right: 50px;
+align-self: flex-end;
+
+
+}
+.s1
+{
+  padding: 2.5px;
+   width: 25%;
+   height: 20%;
+
+}
+
+input[type="submit"], input[type="button"]
+{
+
+width: 100px;
+height: 30px;
+border: 1px solid;
+background: #2691d9;
+border-radius: 25px;
+font-size: 14px;
+color: #e9f4fb;
+font-weight: 700;
+cursor: pointer;
+outline: none;
+float: right;
+
+}
+
+input[type="submit"]:hover, input[type="button"]:hover
+{
+  border-color: #2691d9;
+  transition: .5s;
+
+}
+nav
+{
+	flex: 1;
+	padding-left: 60px;
+}
+
+nav ul li
+{
+display: inline-block;
+list-style: none;
+margin: 0px 20px;
+}
+nav ul li a
+{
+	text-decoration: none;
+	color: black;
+	font-size: 25px;
+  padding: 10px;
+}
+.content h1
+{
+	font-size:60px;
+	font-weight: 100;
+	margin-top: 24px;
+	margin-bottom: 15px;
+	color: #232d60; 
+	text-align: center;
+}
+
+.content a
+{
+
+	text-align: center;
+}
+
+.item{
+  background-color: rgba(73, 67, 67, 0.589);
+  padding: 20px 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.item input{
+  justify-content: flex-end;
+}
+
+label{
+  font-size: 20px;
+}
+
+.details{
+  display: flex;
+  justify-content: space-around;
+}
+
+.values{
+  display: flex;
+  justify-content: space-around;
+  width: 686px;
+}
+
+.order{
+  height: 60%;
+  overflow-y: auto;
+  border: 2px solid black;
+}
+
+.drop{
+  padding-right: 20px;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 5px grey;
+}
+
+::-webkit-scrollbar-thumb{
+  background:rgba(73, 67, 67, 0.589);
+  border-radius: 3px;
+}
+
+.values i{
+  margin-left: 10px;
+  padding: 1px 3px;
+  border: 1px solid black;
+  border-radius: 2px;
+  color: black;
+}
+
+.values a{
+  cursor:pointer;
+  
+}
+
+.container1{
+  margin: 20px;
+}
+
+h3{
+  display: flex;
+  justify-content: center;
+}

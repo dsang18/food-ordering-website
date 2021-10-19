@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Logged in</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+</head>
+<body>
+
+	<div class="container">
+		<div class="navbar">
+			<img src="{% static 'food.jpg' %}" class="logo">
+			<nav>
+				<ul>
+					<li><a href="myprofile/">My Profile</a></li>
+					<li><a href="veg-menu/">Veg</a></li>
+					<li><a href="nonveg-menu/">Non veg</a></li>
+					<li><a href="cart/">Cart</a></li>
+					<li><a href="/order-food/">Log out</a></li>
+					
+
+
+				</ul>
+			</nav>
+
+		
+	</div>
+
+
+</body>
+</html>

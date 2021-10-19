@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cart</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'cart.css' %}">
+</head>
+<body>
+
+	<div class="container">
+		<div class="navbar">
+			<img src="{% static 'food.jpg' %}" class="logo">
+			<nav>
+				<ul>
+					
+					<li><a href="/order-food/home/{{pk}}/">Home</a></li>
+					<li><a href="/order-food/home/{{pk}}/veg-menu/">Veg</a></li>
+					<li><a href="/order-food/home/{{pk}}/nonveg-menu/">Non veg</a></li>
+					<li><a href="/order-food/home/{{pk}}/myprofile/">My Profile</a></li>
+					<li><a href="/order-food/">Log out</a></li>
+					
+				</ul>
+			</nav>
+		</div>
+
+
+			<div class="order">
+			<form method="post">
+			{% csrf_token %}
+			{% if cart_items %}
+				{% for i in cart_items %}
+				<div class="item">
+					<label name="fooditem"> {{i.1}}</label>
+					<input type="submit" name="{{i.1}}" value="Remove">
+					<div class="details">
+						<label class="Qty"> Quantity </label>
+						<label class="unit"> Unit price</label>
+						<label class="total">Total price</label>
+					</div>
+					<div class="values">	
+						<label class="Qty-value"> {{i.3}}</label>
+						<label class="unit-value"> {{i.2}}</label>
+						<label class="total-value">{{i.4}}</label>
+					</div>
+				</div>
+				{% endfor %}
+			{% else %}
+				<h3> Your cart is empty!!</h3>
+			{% endif %}
+			</div>
+
+		<div class="container1">	 	
+		<label class="total-amt">Total Amount:&nbsp;&nbsp;&nbsp;{{total}}</label>
+
+		<a href="/order-food/home/{{pk}}/"><input type="button" value="Back"></a>
+		<input type="button" value="Order">	   
+		
+		</div>
+	</div>
+
+</form>
+</body>
+</html>

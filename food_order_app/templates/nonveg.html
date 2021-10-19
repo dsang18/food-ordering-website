@@ -1,0 +1,71 @@
+{% load static %} 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Non veg</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'nonveg.css' %}">
+</head>
+<body>
+
+	<div class="container">
+		<div class="navbar">
+			<img src="{% static 'food.jpg' %}" class="logo">
+			<nav>
+				<ul>
+					<li><a href="/order-food/home/{{pk}}/">Home</a></li>
+					<li><a href="/order-food/home/{{pk}}/myprofile/">My Profile</a></li>
+					<li><a href="/order-food/home/{{pk}}/veg-menu/">Veg</a></li>
+					<li><a href="/order-food/home/{{pk}}/cart/">Cart</a></li>
+					<li><a href="/order-food/">Log out</a></li>
+					
+
+
+				</ul>
+			</nav>
+		</div>
+
+		<form method="POST">
+		{% csrf_token %}
+			<div class="drop">
+				<select class="s1" name="food">
+					<option required>select item</option>
+                    {% for i in nonveg_menu %}
+						<option value="{{i.1}}">{{i.1}}</option>
+					{% endfor %}
+				</select>
+  <br><br>
+
+   				<select class="s1" name="qty">
+   					<option value="1" selected >1</option>
+   					<option value="2">2</option>
+   					<option value="3">3</option>
+   					<option value="4">4</option>
+   					<option value="5">5</option>
+   					<option value="6">6</option>
+   					<option value="7">7</option>
+   					<option value="8">8</option>
+   					<option value="9">9</option>
+   					<option value="10">10</option>
+   					
+
+
+
+   				</select>
+
+		<br> <br>
+		<br><br>
+		<input type="submit" value="Add to Cart">
+			
+		
+		<a href="/order-food/home/{{pk}}/"> <input type="button" value="Back"> </a>
+			
+      </div>           
+    </div>
+		
+	</div>
+
+</form>
+</body>
+</html>
